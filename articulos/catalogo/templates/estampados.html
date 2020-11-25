@@ -1,0 +1,219 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+<body>
+    <style>
+
+        h1{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+        h5{margin-left: auto; margin-right: auto; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+        li{justify-items: right;}
+        body {background-color: #dbdbdbd8;}
+        .footer {  position: fixed;  left: 0;  bottom: 0;  width: 100%;  background-color: rgb(145, 145, 145);  color: white;  text-align: center;}
+
+        div.gallery {
+        border: 1px solid #ccc;
+        }
+            
+        div.gallery:hover {
+        border: 1px solid #777;
+        }
+            
+        div.gallery img {
+        width: 100%;
+        height: auto;
+        }
+            
+        div.desc {
+        padding: 15px;
+        text-align: center;
+        }
+            
+        * {
+        box-sizing: border-box;
+        }
+            
+        .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+        }
+            
+        @media only screen and (max-width: 700px) {
+        .responsive {
+        width: 49.99999%;
+        margin: 6px 0;}
+        }
+           
+        @media only screen and (max-width: 500px) {
+        .responsive {
+        width: 100%;
+              }
+            }
+            
+        .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        </style>
+
+        <link rel="stylesheet" href="css/bootstrap.css" />
+               
+            <body style="background-image:url(imges/STARS.jpg)">
+            <div></div>
+            
+            {% load static %}
+            <hr>
+                <p class="container">Echa un vistazo a algunos de nuestros articulos estampados más destacados</p>
+                <!-- Container for the image gallery -->
+                <div class="container">
+
+                <!-- Full-width images with number text -->
+                <div class="mySlides">
+                <div class="numbertext">1 / 12</div>
+                    <img src="{% static 'images/est/estampado1.png' %}" width="400" height="400">
+                </div>
+                
+                <div class="mySlides">
+                <div class="numbertext">2 / 12</div>
+                    <img src="{% static 'images/est/estampado2.png' %}" width="400" height="400">
+                </div>
+                
+                <div class="mySlides">
+                <div class="numbertext">3 / 12</div>
+                    <img src="{% static 'images/est/tazon1.png' %}" width="400" height="400">
+                </div>
+                
+                <div class="mySlides">
+                <div class="numbertext">4 / 12</div>
+                    <img src="{% static 'images/est/tazon3.png' %}" width="400" height="400">
+                </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 12</div>
+                        <img src="{% static 'images/est/tazon4.png' %}" width="400" height="400">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 12</div>
+                        <img src="{% static 'images/est/variado1.png' %}" width="400" height="400">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 12</div>
+                        <img src="{% static 'images/est/variado 2.png' %}" width="400" height="400">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 12</div>
+                        <img src="{% static 'images/est/variado3.png' %}" width="400" height="400">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">9 / 12</div>
+                        <img src="{% static 'images/est/variado4.png' %}" width="400" height="400">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">11 / 12</div>
+                        <img src="{% static 'images/est/variado5.png' %}" width="400" height="400">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">10 / 12</div>
+                        <img src="{% static 'images/est/reloj.PNG' %}" width="400" height="400">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">12 / 12</div>
+                        <img src="{% static 'images/est/reloj2.PNG' %}" width="400" height="400">
+                    </div>
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                    <!-- Image text -->
+                    <div class="caption-container">
+                    <p id="caption"></p>
+                    </div>
+                
+                    <!-- Thumbnail images -->
+                    <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/estampado1.png' %}"  style="width:50%" onclick="currentSlide(1)" alt="Polera diseño embarazo, mujer">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/estampado2.png' %}"  style="width:50%" onclick="currentSlide(2)" alt="Polerón Paw Patrol, niño">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/tazon1.png' %}" style="width:50%" onclick="currentSlide(3)" alt="Tazón Iron-man">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/tazon3.png' %}" style="width:50%" onclick="currentSlide(4)" alt="Tazón exhibidor JW">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/tazon4.png' %}" style="width:50%" onclick="currentSlide(5)" alt="Tazón zorros, pareja">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/variado1.png' %}" style="width:50%" onclick="currentSlide(6)" alt="Mantel de los recuerdos">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/variado 2.png' %}" style="width:50%" onclick="currentSlide(7)" alt="Cojín personalizado">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/variado3.png' %}"  style="width:50%" onclick="currentSlide(8)" alt="Recuerdos, matrimonio">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/variado4.png' %}" style="width:50%" onclick="currentSlide(9)" alt="Cojín + tazones, aniversario">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/variado5.png' %}" style="width:50%" onclick="currentSlide(10)" alt="Libretas personalizadas">
+                    </div>
+                        <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/reloj.PNG' %}" style="width:50%" onclick="currentSlide(11)" alt="Reloj personalizado, flores, mujer">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'images/est/reloj2.PNG' %}" style="width:50%" onclick="currentSlide(12)" alt="Reloj personalizado, JW, mujer">
+                    </div>
+                    </div>
+                </div> 
+
+                    <script> //Java Script
+                            var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("demo");
+                        var captionText = document.getElementById("caption");
+                        if (n > slides.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = slides.length}
+                        for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " active";
+                        captionText.innerHTML = dots[slideIndex-1].alt;
+                    } 
+                    </script>
+    </body>
+</html>
+{% endblock %}

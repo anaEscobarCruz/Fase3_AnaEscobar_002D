@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<p></p>
+<h1>Crear Producto</h1>
+
+<from acion ="" method="post">
+    {% csrf_token%}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="Aceptar">
+</from>
+
+{% endblock %} 

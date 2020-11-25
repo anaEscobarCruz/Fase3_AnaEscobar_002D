@@ -1,0 +1,38 @@
+.navbar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+h1
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+li
+{
+    justify-items: right;
+}
+body 
+{
+    background-color: #000000;
+}
+.footer
+ {  position: fixed;
+    left: 0;  bottom: 0;  width: 100%;  background-color: rgb(38, 139, 221);  color: white;  text-align: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+.container{
+    background-color: #eee; 
+}
+
+.row{
+
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}

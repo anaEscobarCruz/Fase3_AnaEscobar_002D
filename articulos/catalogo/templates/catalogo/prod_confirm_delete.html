@@ -1,0 +1,13 @@
+{%extends "base_generic.html"%}
+
+{%block content%}
+
+<h1>Eliminar Producto</h1>
+<p>Esta acción no puede ser desecha ¿Está seguro de que desea proceder?</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" action="" value="Delete">
+</form>
+
+{% endblock %}

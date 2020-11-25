@@ -1,0 +1,75 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+
+    <hr>
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            {% load static %}
+            <img src="{% static 'images/carrusel1.png' %}" style="width:50%" class="center">
+            <div class="text"></div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            {% load static %}
+            <img src="{% static 'images/carusel2.png' %}" style="width:50%" class="center">
+            <div class="text"></div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            {% load static %}
+            <img src="{% static 'images/carusel3.png' %}" style="width:50%" class="center">
+            <div class="text"></div>
+          </div>
+        
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <script> //Java Script
+            var slideIndex = 0;
+          showSlides();
+
+          function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 2000); // Change image every 4 seconds
+          } 
+        </script>
+        
+
+    <hr>
+    <div>
+        <div>
+            <section class="container">                    
+                <p style="text-align:center">Somos un negocio familiar dedicado a estampar, decorar y personalizar diferentes artículos con materiales de calidad. Dedicamos nuestras energías a proporcionar los mejores productos con la mejor durabilidad y resistencia. Sabemos lo importante que son las ocaciones en que nuestros clientes buscan dar regalos personalizados, es por eso que nos compometemos con otorgar total discreción y respetar la privacidad de nuestros clientes. Los recuerdos son algo preciado y es por eso que nos honra que nos elija para ser parte de estos momentos tan especiales para ustedes.</p>
+                {% load static %}
+                <a ><img class="alinear1" src="{% static 'images/quality.png' %}" style="width: 200px;height: 200px";></a>
+
+                <p>Eleifend donec pretium vulputate sapien nec sagittis aliquam. Facilisis sed odio morbi quis commodo odio aenean sed. Ultrices eros in cursus turpis massa tincidunt. Condimentum lacinia quis vel eros. Feugiat nibh sed pulvinar proin gravida hendrerit. Risus in hendrerit gravida rutrum quisque non. Facilisis gravida neque convallis a cras semper. Eu mi bibendum neque egestas congue quisque egestas diam in. Proin sed libero enim sed faucibus turpis in.</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

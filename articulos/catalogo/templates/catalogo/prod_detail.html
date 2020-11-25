@@ -1,0 +1,17 @@
+{%extends "base_generic.html"%}
+
+{%block content%}
+
+{% load static %}
+
+<header class="masthead">
+    <div class="container d-flex flex-column">
+        <h1 class="page-section-heading text-uppercase text-secondary mb-0" > {{genre.name}} 
+            
+        <h1>Producto: {{producto}}</h1>
+        <p>{{producto.id}} {{producto.nom}} {{producto.cant}}</p>
+
+    </div>
+</header>
+
+{% endblock %}
