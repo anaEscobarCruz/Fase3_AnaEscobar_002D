@@ -1,3 +1,56 @@
+            h1{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+            h5{margin-left: auto; margin-right: auto; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+            li{justify-items: right;}
+            body {background-color: #dbdbdbd8;}
+            .footer {  position: fixed;  left: 0;  bottom: 0;  width: 100%;  background-color: rgb(145, 145, 145);  color: white;  text-align: center;}
+
+            div.gallery {
+              border: 1px solid #ccc;
+            }
+            
+            div.gallery:hover {
+              border: 1px solid #777;
+            }
+            
+            div.gallery img {
+              width: 100%;
+              height: auto;
+            }
+            
+            div.desc {
+              padding: 15px;
+              text-align: center;
+            }
+            
+            * {
+              box-sizing: border-box;
+            }
+            
+            .responsive {
+              padding: 0 6px;
+              float: left;
+              width: 24.99999%;
+            }
+            
+            @media only screen and (max-width: 700px) {
+              .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+              }
+            }
+            
+            @media only screen and (max-width: 500px) {
+              .responsive {
+                width: 100%;
+              }
+            }
+            
+            .clearfix:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+
 .navbar-nav {
     margin-top: 20px;
     padding: 0;
@@ -35,4 +88,10 @@ img {
     width: 50%;
     height: 50%;
     object-fit: cover;
+}
+
+section{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
 }

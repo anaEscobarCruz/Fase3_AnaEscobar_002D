@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Local Library Home</h1>
+<div class="container">
+<h1>Bienvenido</h1>
 
-  <p>Welcome to <em>LocalLibrary</em>, Django website </p>
+  <p>A continuación inicie sesión</p>
 <h2>Login</h2>
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Login</button>
 </form>
+</div>
 {% endblock %}
