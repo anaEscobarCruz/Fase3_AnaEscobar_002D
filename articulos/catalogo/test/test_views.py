@@ -1,11 +1,11 @@
 from django.test import TestCase, Client
 from django.test import client
 from django.urls import reverse
-from catalogo.models import Producto, Stock
+from articulos.catalogo.models import Producto1
 import json
 
 
-class ProductoTestCase(TestCase):
+class Producto1TestCase(TestCase):
 
     def test_project_list_GET(self):
         client = Client()

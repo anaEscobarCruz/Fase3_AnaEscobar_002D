@@ -1,14 +1,11 @@
 from django.test import TestCase
-from models import Producto, Stock
+from articulos.catalogo.models import Producto1
 
-class ProdTestCase(TestCase):
+class Producto1TestCase(TestCase):
     def setUp(self):
-        p1=Producto.objects.create(nom="Tazón")
-        p2=Producto.objects.create(nom="Llavero")
-        Stock.objects.create(id="T3", nom=p1, summary="Tazón mágico")
-        Stock.objects.create(id="L2", nom=p2, summary="Llavero corazón")
+        Producto1.objects.create(id="977",nom="Tazón")
 
-def test_Prod_data(self):
-    produ1 = Stock.objects.get(id="T3")
-    self.assertEqual(produ1.Producto.nom, "Tazón")
+    def test_Producto1(self):
+        producto = Producto1.objects.get(id="977")
+        self.assertEqual(producto.nom, "Tazón")
     

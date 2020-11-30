@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'catalogo.apps.CatalogoConfig',
     'sesion.apps.SesionConfig',
     'rest_framework',
+    'pedidos.apps.PedidosConfig',
 ]
 
 REST_FRAMEWORK = {
